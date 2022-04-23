@@ -1,0 +1,35 @@
+Config
+  { font = "xft:Iosevka Nerd Font:size=12"
+  , borderColor = "black"
+  , bgColor = "black"
+  , fgColor = "grey"
+  , alpha = 0
+  , position = Top
+  , textOffset = -1
+  , iconOffset = -1 
+  , lowerOnStart = False
+  , pickBroadest = False
+  , persistent = True
+  , hideOnStart = False
+  , iconRoot = "."
+  , allDesktops = True
+  , overrideRedirect = True
+  , commands =
+    [ Run Network "enp2s0" ["-L","0","-H","32", "--normal","green","--high","red"] 10
+    , Run Memory ["-t","<usedratio>%"] 10
+    , Run Swap [] 10
+    , Run Date "%H:%M:%S %a %d.%m.%Y" "date" 10
+    , Run MultiCpu
+      [ "--template" , "<total0>% <total1>% <total2>% <total3>% <total4>% <total5>% <total6>% <total7>%"
+      , "--Low"      , "50"
+      , "--High"     , "85"
+      , "--low"      , "gray"
+      , "--normal"   , "darkorange"
+      , "--high"     , "red"
+      ] 10
+    , Run StdinReader
+    ]
+    , sepChar = "%"
+    , alignSep = "}{"
+    , template = "%StdinReader% | %multicpu% | %memory% * %swap% | %enp2s0% }{ %date%"
+  }

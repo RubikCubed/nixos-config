@@ -71,6 +71,7 @@
     wget
     curl
     acpi
+    haskellPackages.xmobar
   ];
 
   nix = {

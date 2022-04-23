@@ -6,17 +6,15 @@
     ./programs/xmonad.nix
     ./programs/neovim.nix
     ./programs/vscode.nix
-#    ./programs/alacritty.nix
+    ./programs/alacritty.nix
     ./programs/zsh
   ];
 
   programs.home-manager.enable = true;
   programs = {
-    bat.enable = true;
-    exa.enable = true;
     fzf.enable = true;
     fzf.enableZshIntegration = true;
-    git.enable = true;
+    steam.enable = true;
   };
 
   xsession = {
@@ -31,11 +29,17 @@
     homeDirectory = "/home/spider";
     stateVersion = "21.11";
     packages = with pkgs; [
-      alacritty
+      bat
+      exa
+      git
       discord
       dmenu
       firefox
       haskell-language-server
+      htop
+      (nerdfonts.override {
+        fonts = [ "Iosevka" ];
+      })
     ];
   };
 }

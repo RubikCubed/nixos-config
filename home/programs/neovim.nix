@@ -7,6 +7,7 @@
     vimAlias = true;
     plugins = with pkgs.vimPlugins; [
       nvim-lspconfig
+      vim-nix
     ];
     extraPackages = with pkgs; [ rnix-lsp ];
     extraConfig = ''

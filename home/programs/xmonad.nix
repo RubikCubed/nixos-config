@@ -6,4 +6,5 @@
     enableContribAndExtras = true;
     config = ./xmonad/Main.hs;
   };
+  xdg.configFile."xmobar/xmobarrc".source = ./xmobarrc;
 }

@@ -38,6 +38,9 @@
         modules = [
           { 
             nixpkgs = { 
+              #overlays = [
+              #  (self: super: { hie-nix = import ~/src/hie-nix {}; })
+              #];
 	      #inherit overlays;
               config.allowUnfree = true;
             }; 
