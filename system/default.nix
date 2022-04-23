@@ -72,6 +72,8 @@
     curl
     acpi
     haskellPackages.xmobar
+    ghc
+    cabal-install
   ];
 
   nix = {

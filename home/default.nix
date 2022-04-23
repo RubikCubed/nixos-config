@@ -14,7 +14,6 @@
   programs = {
     fzf.enable = true;
     fzf.enableZshIntegration = true;
-    steam.enable = true;
   };
 
   xsession = {
@@ -32,8 +31,8 @@
       bat
       exa
       git
-      discord
       dmenu
+      discord
       firefox
       haskell-language-server
       htop
