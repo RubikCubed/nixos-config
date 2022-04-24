@@ -15,6 +15,7 @@
     fzf.enable = true;
     fzf.enableZshIntegration = true;
     alacritty = import ./programs/alacritty.nix;
+
   };
 
   xsession = {
@@ -37,6 +38,7 @@
       firefox
       haskell-language-server
       htop
+      dbus
       (nerdfonts.override {
         fonts = [ "Iosevka" ];
       })

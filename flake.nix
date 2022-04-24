@@ -10,6 +10,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+
 #    neovim = {
 #      url = "github:neovim/neovim?dir=contrib";
 #      inputs.nixpkgs.follows = "nixpkgs";

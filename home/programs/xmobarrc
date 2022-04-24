@@ -1,9 +1,9 @@
 Config
   { font = "xft:Iosevka Nerd Font:size=12"
   , borderColor = "black"
-  , bgColor = "black"
-  , fgColor = "grey"
-  , alpha = 0
+  , bgColor = "#282828"
+  , fgColor = "#928374"
+  , alpha = 255
   , position = Top
   , textOffset = -1
   , iconOffset = -1 
@@ -15,15 +15,14 @@ Config
   , allDesktops = True
   , overrideRedirect = True
   , commands =
-    [ Run Network "enp2s0" ["-L","0","-H","32", "--normal","green","--high","red"] 10
-    , Run Memory ["-t","<usedratio>%"] 10
+    --[ Run Network "enp2s0" ["-L","2048","-H","32000", "--normal","green","--high","red"] 10
+    [ Run Memory ["-t","<usedratio>%"] 10
     , Run Swap [] 10
-    , Run Date "%H:%M:%S %a %d.%m.%Y" "date" 10
+    , Run Date "%a %d %b <fc=#ebdbb2>%R %p</fc> " "date" 10
     , Run MultiCpu
       [ "--template" , "<total0>% <total1>% <total2>% <total3>% <total4>% <total5>% <total6>% <total7>%"
       , "--Low"      , "50"
       , "--High"     , "85"
-      , "--low"      , "gray"
       , "--normal"   , "darkorange"
       , "--high"     , "red"
       ] 10
@@ -31,5 +30,5 @@ Config
     ]
     , sepChar = "%"
     , alignSep = "}{"
-    , template = "%StdinReader% }{ CPU: %multicpu% | M: %memory% * Swap: %swap% | %enp2s0% | %date%"
+    , template = "%StdinReader% }{ <fc=#ebdbb2>CPU:</fc> %multicpu% | <fc=#ebdbb2>M:</fc> %memory% * <fc=#ebdbb2>Swap:</fc> %swap% | %date%"
   }

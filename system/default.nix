@@ -43,6 +43,11 @@
   services.picom.enable = true;
   services.sshd.enable = true;
 
+  #services.kmonad = {
+  #  enable = true;
+  #  configfiles = [ ./keyboard/main.kbd ];
+  #};
+
   # Configure keymap in X11
   # services.xserver.layout = "us";
   # services.xserver.xkbOptions = "eurosign:e";
@@ -74,6 +79,9 @@
     haskellPackages.xmobar
     ghc
     cabal-install
+    scrot
+    xclip
+    betterdiscordctl
   ];
 
   programs.steam.enable = true;
@@ -89,16 +97,14 @@
   fonts = {
     enableDefaultFonts = true;
     fonts = with pkgs; [
-      (nerdfonts.override { fonts = [ "SourceCodePro" ]; })
-      font-awesome
-      source-code-pro
       noto-fonts-cjk
       noto-fonts-emoji
     ];
     fontconfig = {
       defaultFonts = {
-        monospace = [ "Source Code Pro" ];
-        sansSerif = [ "DejaVu Sans" "Noto Color Emoji" ];
+        monospace = [ "Iosevka Nerd Font" ];
+#        sansSerif = [ "Iosevka Nerd Font" "Noto Color Emoji" ];
+#        serif     = [ "Iosevka Nerd Font" "Noto Color Emoji" ];
       };
     };
   };
