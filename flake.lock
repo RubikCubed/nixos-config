@@ -2,11 +2,11 @@
   "nodes": {
     "flake-utils": {
       "locked": {
-        "lastModified": 1629481132,
-        "narHash": "sha256-JHgasjPR0/J1J3DRm4KxM4zTyAj4IOJY8vIl75v/kPI=",
+        "lastModified": 1631561581,
+        "narHash": "sha256-3VQMV5zvxaVLvqqUrNz3iJelLw30mIVSfZmAaauM3dA=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "997f7efcb746a9c140ce1f13c72263189225f482",
+        "rev": "7e5bf3925f6fbdfaf50a2a7ca0be2879c4261d19",
         "type": "github"
       },
       "original": {
@@ -38,28 +38,40 @@
     "kmonad": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
         "dir": "nix",
-        "lastModified": 1630622629,
-        "narHash": "sha256-dBZfNRzxF/dDatmlGUM7ZcfCTAixnRsYXKzAXbb12P8=",
-        "owner": "pnotequalnp",
+        "lastModified": 1650438331,
+        "narHash": "sha256-O531r2t6CcIHhhDdHJXeu7LFND/Ss43qyha4mXlB9LA=",
+        "owner": "kmonad",
         "repo": "kmonad",
-        "rev": "d130553134f0fb2254852e719a06bc36dce58441",
+        "rev": "744c0445ac9beaece489cd6cdc981eeae45467a7",
         "type": "github"
       },
       "original": {
         "dir": "nix",
-        "owner": "pnotequalnp",
-        "ref": "flake",
+        "owner": "kmonad",
         "repo": "kmonad",
         "type": "github"
       }
     },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1632418649,
+        "narHash": "sha256-4rZspkiQU7zbsuciRRMgoEPkAF/+FSv2jx/VIPxPVx4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "056a3c1fae30d06d14b171b9023743c21a23ec1a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-21.05",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1641230035,
         "narHash": "sha256-hFyqihERaTbLxCOlugy/rpp22VLtLh8SPRnA2uu3F/8=",
@@ -79,7 +91,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "kmonad": "kmonad",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },

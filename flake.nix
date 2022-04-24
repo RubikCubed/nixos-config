@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    kmonad.url = "github:kmonad/kmonad?dir=nix";
     #nixpkgs.url = "github:nixos/nixpkgs/nixos-21.11";
 
     home-manager = {
@@ -10,7 +11,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-
+    #kmonad = {
+    #  url = "github:pnotequalnp/kmonad/flake?dir=nix";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 #    neovim = {
 #      url = "github:neovim/neovim?dir=contrib";
 #      inputs.nixpkgs.follows = "nixpkgs";
