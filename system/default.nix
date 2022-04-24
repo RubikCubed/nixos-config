@@ -43,10 +43,10 @@
   services.picom.enable = true;
   services.sshd.enable = true;
 
-  #services.kmonad = {
-  #  enable = true;
-  #  configfiles = [ ./keyboard/main.kbd ];
-  #};
+  services.kmonad = {
+    enable = true;
+    configfiles = [ ./keyboard/main.kbd ];
+  };
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
