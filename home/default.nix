@@ -6,7 +6,7 @@
     ./programs/xmonad.nix
     ./programs/neovim.nix
     ./programs/vscode.nix
-    ./programs/alacritty.nix
+#    ./programs/alacritty.nix
     ./programs/zsh
   ];
 
@@ -14,6 +14,7 @@
   programs = {
     fzf.enable = true;
     fzf.enableZshIntegration = true;
+    alacritty = import ./programs/alacritty.nix;
   };
 
   xsession = {

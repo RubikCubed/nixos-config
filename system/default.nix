@@ -76,6 +76,8 @@
     cabal-install
   ];
 
+  programs.steam.enable = true;
+
   nix = {
     package = pkgs.nixUnstable; # or versioned attributes like nix_2_4
     extraOptions = ''
