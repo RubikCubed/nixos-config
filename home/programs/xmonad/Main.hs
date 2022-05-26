@@ -8,7 +8,9 @@ import XMonad.Layout.Spacing (smartSpacingWithEdge)
 import XMonad.Util.Run (spawnPipe, hPutStrLn)
 import XMonad.Util.EZConfig (additionalKeysP)
 
-myLayout = avoidStruts . smartSpacingWithEdge 8 $ Tall 1 (3 / 100) (2 / 3)
+myLayout = avoidStruts . smartSpacingWithEdge 8 $ tiled ||| Mirror tiled ||| Full
+  where
+    Tall 1 (3 / 100) (2 / 3)
 
 main :: IO ()
 main = do
