@@ -4,6 +4,7 @@ import XMonad
 import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.ManageDocks (avoidStruts, docks)
 import XMonad.Hooks.DynamicLog
+import XMonad.Layout.ThreeColumns
 import XMonad.Layout.Spacing (smartSpacingWithEdge)
 import XMonad.Util.Run (spawnPipe, hPutStrLn)
 import XMonad.Util.EZConfig (additionalKeysP)
